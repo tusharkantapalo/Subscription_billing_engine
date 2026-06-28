@@ -1,0 +1,24 @@
+[project]
+name = "billing-engine-starter"
+version = "0.1.0"
+description = "Capstone: Subscription Billing Engine"
+requires-python = ">=3.11"
+dependencies = [
+    "reportlab>=4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+]
+
+[project.scripts]
+billing = "billing_engine.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["billing_engine*"]
